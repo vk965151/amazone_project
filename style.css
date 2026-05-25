@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  border: border-box;
+  box-sizing: border-box;
   font-family: Arial;
 }
 
@@ -261,4 +261,221 @@ ul li {
 
 .copyright {
   padding-top: 5px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.card {
+  flex: 1 1 300px; /* grow, shrink, min-width */
+}
+
+
+
+
+/* --------------------------------------------Responsive Design-------------------------------------------- */
+@media screen and (max-width: 1024px) {
+  .navbar {
+    gap: 10px;
+    padding: 0 10px;
+    justify-content: space-between;
+  }
+
+  .nav-search {
+    flex: 1;
+    max-width: 520px;
+    min-width: 260px;
+  }
+
+  .box {
+    width: 31%;
+  }
+
+  .foot-panel2 {
+    gap: 25px;
+    height: auto;
+    padding: 20px 30px;
+    flex-wrap: wrap;
+  }
+
+  .foot-panel2 ul {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    height: auto;
+    min-height: 60px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 8px 12px;
+  }
+
+  .nav-logo {
+    width: 95px;
+  }
+
+  .nav-address,
+  .country,
+  .nav-return {
+    display: none;
+  }
+
+  .nav-signin {
+    text-align: right;
+  }
+
+  .nav-cart i {
+    font-size: 24px;
+  }
+
+  .nav-search {
+    order: 2;
+    flex-basis: 100%;
+    max-width: none;
+    min-width: 0;
+    margin-top: 8px;
+  }
+
+  .panel {
+    height: auto;
+    min-height: 40px;
+    gap: 12px;
+    padding: 8px 12px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .panel-ops {
+    width: auto;
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .panel-ops p {
+    margin-left: 0;
+  }
+
+  .panel-deals {
+    display: none;
+  }
+
+  .hero-section {
+    height: 260px;
+    background-position: center;
+  }
+
+  .hero-msg {
+    width: 92%;
+    height: auto;
+    min-height: 42px;
+    padding: 8px 12px;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  .shop-section {
+    gap: 14px;
+    padding: 14px;
+    justify-content: center;
+  }
+
+  .box {
+    width: calc(50% - 10px);
+    height: auto;
+    margin-top: 0;
+  }
+
+  .box-img {
+    height: 220px;
+    background-position: center;
+  }
+
+  .box-content h2 {
+    font-size: 1.1rem;
+  }
+
+  .foot-panel2 {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    gap: 8px;
+  }
+
+  .nav-signin {
+    display: none;
+  }
+
+  .nav-cart {
+    font-size: 0.8rem;
+  }
+
+  .search-select {
+    width: 46px;
+  }
+
+  .search-input {
+    font-size: 0.9rem;
+  }
+
+  .panel {
+    font-size: 0.85rem;
+  }
+
+  .panel-ops {
+    width: 100%;
+    order: 2;
+  }
+
+  .hero-section {
+    height: 210px;
+  }
+
+  .hero-msg {
+    width: 94%;
+    margin-bottom: 16px;
+    font-size: 0.78rem;
+  }
+
+  .shop-section {
+    padding: 12px;
+  }
+
+  .box {
+    width: 100%;
+    padding-top: 16px;
+  }
+
+  .box-img {
+    height: 250px;
+  }
+
+  .foot-panel2 {
+    padding: 20px;
+  }
+
+  .foot-panel2 ul {
+    width: 100%;
+  }
+
+  .footer-panel4 {
+    height: auto;
+    padding: 16px 12px;
+  }
+
+  .pages {
+    padding-top: 0;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
